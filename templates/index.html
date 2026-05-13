@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Load Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Solar Load Calculator</h1>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+
+        <label for="bill">Select Bill File:</label>
+        <input type="file" name="bill" id="bill" title="Upload your electricity bill" required>
+
+        <button type="submit">
+            Upload & Generate Excel
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
